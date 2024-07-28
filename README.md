@@ -10,11 +10,11 @@ git clone https://github.com/Gun8hoot/PySubFinder.git
 ```shell
 cd ./PySubFinder
 ```
-- **(optional)** : If you dont have a wordlist extract the subdomain_wl.tar file
+- **(optional)** : If you don't have a wordlist extract the subdomain_wl.tar file
 ```shell
 tar -xvf ./subdomain_wl.tar
 ```
-- **(optional)** :  Create a python virtual environement before installing every module
+- **(optional)** :  Create a python virtual environment before installing every module
 ```shell
 python3 -m venv .venv && source ./.venv/bin/activate
 ```
@@ -31,9 +31,16 @@ python3 ./main.py -u {URL} -f {WORDLIST_PATH}
 ***I dont know why admin was print twice***
 
 
+> ⚠️ : It is preferable to use ffuf in CTF, because you can't filter HTTP response size with this tool
+ ```shell
+ # To filter HTTP response size with ffuf do:
+ ffuf -w {WORDLIST}:FUZZ -u {URL} -H "Host: FUZZ.{URL}"
+ # Look common size in the output. If the commun size 15949, replace 15949 in {SIZE}
+ ffuf -w {WORDLIST}:FUZZ -u {URL} -H "Host: FUZZ.{URL}" -fs {SIZE}
+ ```
 
 
-
+<br><br>
 
 ---
 > Write in: </br>
