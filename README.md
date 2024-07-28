@@ -22,12 +22,19 @@ python3 -m venv .venv && source ./.venv/bin/activate
 ```shell
 pip install -r ./requirements.txt
 ```
+### Usage
+---
+```shell
+python3 ./main.py -u {URL} -f {WORDLIST_PATH}
+```
+![Usage gif](./images/example.gif)
+***I dont know why admin was print twice***
 
 
 
 
 
-<br><br><br>
 
+---
 > Write in: </br>
 >[![S/O skillicons for th icon](https://skillicons.dev/icons?i=python&theme=dark)](https://skillcons.dev/)
